@@ -1,24 +1,27 @@
-package Í¨Ñ¶Â¼;
-import java.util.Scanner;
+package é€šè®¯å½•;
+import java.util.ArrayList;
 public class Person{
-	int phone;
-	String name;
-	String sex;
-	int StudentID;
-	@SuppressWarnings({ "unused", "resource" })
-	public Person input(){ 
+	private int user;
+	private int password;
+	private int phone;
+	ArrayList<Person>list=new ArrayList<>();
+	public ArrayList<Person> creat(int user,int password,int phone) {
+		this.user=user;
+		this.password=password;
+		this.phone=phone;
+		ArrayList<Person>list=new ArrayList<>();
+		list.add(this);
+		return list;
+	}
+	public boolean equals(int user,int password) {
 		Person a=new Person();
-	    Scanner sc = new Scanner(System.in); 
-	    System.out.println("ÇëÊäÈëĞÕÃû£º"); 
-	    a.name = sc.nextLine(); 
-	    System.out.println("ÇëÊäÈëĞÔ±ğ£º"); 
-	    a.sex=sc.next();
-	    System.out.println("ÇëÊäÈëµç»°ºÅÂë£º"); 
-	    a.phone = sc.nextInt(); 
-	    System.out.println("ÇëÊäÈëÑ§ºÅ£º");
-	    a.StudentID=sc.nextInt();
-	    return a;
+		a.user=user;
+		a.password=password;
+		if(list.indexOf(a)==-1) {
+			return false;
+		}
+		else return true;
+		
 	}
 }
-
 
