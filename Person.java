@@ -1,27 +1,29 @@
-package 通讯录;
-import java.util.ArrayList;
-public class Person{
-	private int user;
-	private int password;
-	private int phone;
-	ArrayList<Person>list=new ArrayList<>();
-	public ArrayList<Person> creat(int user,int password,int phone) {
-		this.user=user;
-		this.password=password;
-		this.phone=phone;
-		ArrayList<Person>list=new ArrayList<>();
-		list.add(this);
-		return list;
+package com.lzw.dao.model;
+
+public class Person {
+	private int account;
+	private String name;
+	private String faculty;
+	private String majorclass;
+	public Person creat(int a,String n,String f,String m) {
+		Person person=new Person();
+		person.account=a;
+		person.faculty=f;
+		person.majorclass=m;
+		return person;
 	}
-	public boolean equals(int user,int password) {
-		Person a=new Person();
-		a.user=user;
-		a.password=password;
-		if(list.indexOf(a)==-1) {
-			return false;
-		}
-		else return true;
-		
+	public String nametoSring(Person a) {
+		return a.name;
+	}
+	public String facultytoSring(Person a) {
+		return a.faculty;
+	}
+	public String majorclasstoSring(Person a) {
+		return a.majorclass;
+	}
+	public void toSring(Person a) {
+		nametoSring(a);
+		facultytoSring(a);
+		majorclasstoSring(a);
 	}
 }
-
