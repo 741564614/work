@@ -5,13 +5,15 @@ public class Person {
 	private String name;
 	private String faculty;
 	private String majorclass;
+	private String password;
 	private String phone;
-	public Person creat(String a,String n,String f,String m,String p) {
+	public Person create(String a,String p,String n,String f,String m,String tel) {
 		Person person=new Person();
 		person.account=a;
+		person.password=p;
 		person.faculty=f;
 		person.majorclass=m;
-		person.phone=p;
+		person.phone=tel;
 		return person;
 	}
 	public String nametoString(Person a) {
@@ -25,6 +27,12 @@ public class Person {
 	}
 	public String phonetoString(Person a) {
 		return a.phone;
+	}
+	public String accounttoString(Person a) {
+		return a.account;
+	}
+	public String passwordtoString(Person a) {
+		return a.password;
 	}
 	public void toString(Person a) {
 		nametoString(a);
