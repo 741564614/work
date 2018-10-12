@@ -1,12 +1,12 @@
 package com.lzw.dao.model;
 
 public class Person {
-	private int account;
+	private String account;
 	private String name;
 	private String faculty;
 	private String majorclass;
-	private int phone;
-	public Person creat(int a,String n,String f,String m,int p) {
+	private String phone;
+	public Person creat(String a,String n,String f,String m,String p) {
 		Person person=new Person();
 		person.account=a;
 		person.faculty=f;
@@ -23,7 +23,7 @@ public class Person {
 	public String majorclasstoString(Person a) {
 		return a.majorclass;
 	}
-	public int phonetoString(Person a) {
+	public String phonetoString(Person a) {
 		return a.phone;
 	}
 	public void toString(Person a) {

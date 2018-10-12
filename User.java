@@ -1,9 +1,9 @@
 package com.lzw.dao.model;
 
 public class User {
-	private int account;
+	private String account;
 	private String password;
-	public User creat(int a,String p) {
+	public User creat(String a,String p) {
 		User user=new User();
 		user.account=a;
 		user.password=p;
