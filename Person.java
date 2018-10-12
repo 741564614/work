@@ -5,25 +5,31 @@ public class Person {
 	private String name;
 	private String faculty;
 	private String majorclass;
-	public Person creat(int a,String n,String f,String m) {
+	private int phone;
+	public Person creat(int a,String n,String f,String m,int p) {
 		Person person=new Person();
 		person.account=a;
 		person.faculty=f;
 		person.majorclass=m;
+		person.phone=p;
 		return person;
 	}
-	public String nametoSring(Person a) {
+	public String nametoString(Person a) {
 		return a.name;
 	}
-	public String facultytoSring(Person a) {
+	public String facultytoString(Person a) {
 		return a.faculty;
 	}
-	public String majorclasstoSring(Person a) {
+	public String majorclasstoString(Person a) {
 		return a.majorclass;
 	}
-	public void toSring(Person a) {
-		nametoSring(a);
-		facultytoSring(a);
-		majorclasstoSring(a);
+	public int phonetoString(Person a) {
+		return a.phone;
+	}
+	public void toString(Person a) {
+		nametoString(a);
+		facultytoString(a);
+		majorclasstoString(a);
+		phonetoString(a);
 	}
 }
