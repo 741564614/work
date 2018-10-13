@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 import com.lzw.dao.*;
-import com.lzw.register.Register;
+import com.lzw.register.Register1;
 public class Login extends JFrame{
 	/**
 	 * 
@@ -98,7 +98,7 @@ public class Login extends JFrame{
 		
 		ActionListener bt2_ls=new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Register.RegisterActionListener();
+				Register1.RegisterActionListener();
 				
 			}
 		};
