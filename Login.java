@@ -12,15 +12,15 @@ public class Login extends JFrame{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	int count=0;
-	JButton bt1;//登陆按钮
-	JButton bt2;//注册按钮
-	JFrame jf_1;//登陆的框架
-	JLabel jl_1;//登录的版面
-    JTextField jtext1;//用户名框
-    JPasswordField jtext2;//密码框
-    JLabel jl_account;//用户名
-    JLabel jl_password;//密码
+	static int count=0;
+	static JButton bt1;//登陆按钮
+	static JButton bt2;//注册按钮
+	static JFrame jf_1;//登陆的框架
+	static JLabel jl_1;//登录的版面
+    static JTextField jtext1;//用户名框
+    static JPasswordField jtext2;//密码框
+    static JLabel jl_account;//用户名
+    static JLabel jl_password;//密码
 	public Login() {
 		Font font =new Font("黑体", Font.PLAIN, 20);//设置字体
 		jl_1=new JLabel();
@@ -69,8 +69,8 @@ public class Login extends JFrame{
 				jf_1.setLocation(800,400);
 				
 	}
-	public void LoginActionListener(){
-		Login hl=new Login();
+	public static void LoginActionListener(){
+		
 
 		ActionListener bt1_ls=new ActionListener() {
 			
@@ -84,13 +84,13 @@ public class Login extends JFrame{
 					   
 					JOptionPane.showMessageDialog(null, "登录成功");
 					//转跳主界面
-					hl.jf_1.dispose();//销毁当前界面
+					Login.jf_1.dispose();//销毁当前界面
 				}
 				else {
 					count++;
 					JOptionPane.showMessageDialog(null, "用户名或密码错误，连续错误三次自动退出");
 					if(count==3){
-						hl.jf_1.dispose();
+						Login.jf_1.dispose();
 					}
 				}
 			}

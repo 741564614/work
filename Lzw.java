@@ -1,10 +1,16 @@
 package com.lzw;
 import java.util.Scanner;
+import com.lzw.login.*;
 import com.lzw.dao.*;
 import com.lzw.dao.model.*;
 public class Lzw {
 	private static final Scanner sc=new Scanner(System.in);
 	public static void main(String[] args) {
+		new Login();
+		Login.LoginActionListener();
+}
+
+	public void old() {
 		int a;
 		System.out.println("µÇÂ¼Ñ¡1 ×¢²áÑ¡2");
 		a=sc.nextInt();
