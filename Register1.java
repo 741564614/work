@@ -9,8 +9,8 @@ public class Register1 extends JFrame {
 		 * 
 		 */
 		private static final long serialVersionUID = 1L;
-			private JFrame jf_1;//注册窗口框架
-			private JLabel jl_1;//注册窗口面板
+			private static JFrame jf_1;//注册窗口框架
+			private static JLabel jl_1;//注册窗口面板
 			private static JButton bt2;//注册按钮
 			private static JTextField jtext1;//用户名框
 			private static JTextField jtext2;//密码框
@@ -34,7 +34,7 @@ public class Register1 extends JFrame {
 				jl_password.setBounds(20, 120, 60, 50);
 				jl_password.setFont(font);
 				
-				jl_phone=new JLabel("电话号码");
+				jl_phone=new JLabel("电话");
 				jl_phone.setBounds(20,190,60,50);
 				jl_phone.setFont(font);
 				
@@ -69,14 +69,14 @@ public class Register1 extends JFrame {
 				jf_1.setLocation(800,400);
 		    }
 		    public static void RegisterActionListener() {
-		    	Register1 hl=new Register1();
+		    	new Register1();
 		    	ActionListener bt2_ls=new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						String account=jtext1.getText();
 						String password=jtext2.getText();
 						String phone=jtext3.getText();
 						com.lzw.dao.Register.register(account,password,phone);//注册到数据库
-						hl.jf_1.dispose();
+						Register1.jf_1.dispose();
 					}
 				};
 			    bt2.addActionListener(bt2_ls);
