@@ -7,6 +7,7 @@ import javax.swing.*;
 
 import com.lzw.dao.*;
 import com.lzw.register.Register1;
+import com.lzw.*;
 public class Login extends JFrame{
 	/**
 	 * 
@@ -75,13 +76,15 @@ public class Login extends JFrame{
 		ActionListener bt1_ls=new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
+				
 				String admin=jtext1.getText();
 				char[] password=jtext2.getPassword();
 				String str=String.valueOf(password); //将char数组转化为string类型
 				
 				if(Getpassword.equals(admin,str))
 				{
-					   
+					
+					Maininterface.maininterface(1,admin);
 					JOptionPane.showMessageDialog(null, "登录成功");
 					//转跳主界面
 					Login.jf_1.dispose();//销毁当前界面
@@ -98,6 +101,7 @@ public class Login extends JFrame{
 		
 		ActionListener bt2_ls=new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				Register1.RegisterActionListener();
 				
 			}

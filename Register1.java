@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
+
+import com.lzw.Maininterface;
 public class Register1 extends JFrame {
 			/**
 		 * 
@@ -76,6 +78,7 @@ public class Register1 extends JFrame {
 						String password=jtext2.getText();
 						String phone=jtext3.getText();
 						com.lzw.dao.Register.register(account,password,phone);//×¢²áµ½Êý¾Ý¿â
+						Maininterface.maininterface(0,account);
 						Register1.jf_1.dispose();
 					}
 				};
