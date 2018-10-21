@@ -47,11 +47,11 @@ public class Login extends JFrame{
 		bt2.setFont(font);
 		
 		//加入文本框
-				jtext1=new JTextField("请输入用户名");
+				jtext1=new JTextField("");
 				jtext1.setBounds(150, 50, 250, 50);
 				jtext1.setFont(font);
 				
-				jtext2=new JPasswordField("请输入密码");//密码输入框
+				jtext2=new JPasswordField("");//密码输入框
 				jtext2.setEchoChar('*');
 				jtext2.setBounds(150, 120, 250, 50);
 				jtext2.setFont(font);
@@ -84,10 +84,11 @@ public class Login extends JFrame{
 				if(Getpassword.equals(admin,str))
 				{
 					
-					Maininterface.maininterface(1,admin);
+					
 					JOptionPane.showMessageDialog(null, "登录成功");
-					//转跳主界面
 					Login.jf_1.dispose();//销毁当前界面
+					Maininterface.maininterface(1,admin);//转跳主界面
+					
 				}
 				else {
 					count++;
@@ -101,7 +102,7 @@ public class Login extends JFrame{
 		
 		ActionListener bt2_ls=new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				Login.jf_1.dispose();
 				Register1.RegisterActionListener();
 				
 			}

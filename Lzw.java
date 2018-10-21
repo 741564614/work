@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Lzw {
 
 	public static void main(String[] args) {
-		@SuppressWarnings("resource")
+		
 		final Scanner sc=new Scanner(System.in);
 		new Login();
 		Login.LoginActionListener();
@@ -13,6 +13,7 @@ public class Lzw {
 		if(a==5) {
 			Vcf.outvcf();
 		}
+		sc.close();
 }
 
 	

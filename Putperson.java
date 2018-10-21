@@ -8,15 +8,16 @@ public class Putperson {
 		Connectionmysql a= new Connectionmysql();
 		con=a.getConnection();
 		try {
-			pre=con.prepareStatement("select account from people where account=? insert into people(name,faculty,majorclass,sex) values(?,?,?,?) ");
-			pre.setString(1,account);
-			pre.setString(2, n);
-			pre.setString(3, f);
-			pre.setString(4, m);
-			pre.setString(5, s);
+			pre=con.prepareStatement("update  people set name=?,faculty=?,majorclass=?,sex=?  where account=?");
+			pre.setString(1, n);
+			pre.setString(2, f);
+			pre.setString(3, m);
+			pre.setString(4, s);
+			pre.setString(5, account);
 			pre.execute();
 		}catch(SQLException e) {
 			e.printStackTrace();
+			return "ÃÓ–¥ ß∞‹";
 		}
 		
 		return "ÃÓ–¥≥…π¶";

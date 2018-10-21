@@ -27,7 +27,7 @@ public class Getpassword {
 	}
 	public static boolean equals(String account,String password) {
 		String a=getPassword(account);
-		if(a==password) {
+		if(a.equals(password)) {
 			return true;
 		}
 		else return false;

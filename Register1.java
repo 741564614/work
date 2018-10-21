@@ -40,15 +40,15 @@ public class Register1 extends JFrame {
 				jl_phone.setBounds(20,190,60,50);
 				jl_phone.setFont(font);
 				
-				jtext1=new JTextField("请输入用户名");
+				jtext1=new JTextField("");
 				jtext1.setBounds(150, 50, 250, 50);
 				jtext1.setFont(font);
 				
-				jtext2=new JTextField("请输入密码");
+				jtext2=new JTextField("");
 				jtext2.setBounds(150, 120, 250, 50);
 				jtext2.setFont(font);
 				
-				jtext3=new JTextField("请输入电话号码");
+				jtext3=new JTextField("");
 				jtext3.setBounds(150, 190, 250, 50);
 				jtext3.setFont(font);
 				
@@ -78,8 +78,9 @@ public class Register1 extends JFrame {
 						String password=jtext2.getText();
 						String phone=jtext3.getText();
 						com.lzw.dao.Register.register(account,password,phone);//注册到数据库
-						Maininterface.maininterface(0,account);
 						Register1.jf_1.dispose();
+						Maininterface.maininterface(0,account);
+						
 					}
 				};
 			    bt2.addActionListener(bt2_ls);

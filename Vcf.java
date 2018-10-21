@@ -4,7 +4,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.PrintWriter;
 import com.lzw.dao.*;
-import java.io.UnsupportedEncodingException;
 import com.lzw.dao.model.*;
 public class Vcf {
 	 public static void outvcf() {
@@ -21,10 +20,10 @@ public class Vcf {
 					reader.write("\r\n");
 					reader.write("VERSION:2.1");
 					reader.write("\r\n");
-					reader.write("N;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:" + Vcf.qpEncodeing(bean.getName()) + ";");
+					reader.write("N;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:" + bean.getName() + ";");
 					reader.write("\r\n");
 					if ("" != bean.getTel() && bean.getTel() != null) {
-						reader.write("TEL;CELL:" + bean.getTel() + "");
+						reader.write("TEL;CELL:" + bean.getTel() + ";");
 						reader.write("\r\n");
 					}
 					
@@ -38,7 +37,7 @@ public class Vcf {
 			}
 		
 	 }
-	 public static String qpEncodeing(String str)
+	 /*public static String qpEncodeing(String str)
      {
          char[] encode = str.toCharArray();
          StringBuffer sb = new StringBuffer();
@@ -102,6 +101,6 @@ public class Vcf {
              }
          }
          return sb.toString();
-     }
+     }*/
 
 }
