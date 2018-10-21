@@ -21,10 +21,10 @@ public class Vcf {
 					reader.write("\r\n");
 					reader.write("VERSION:2.1");
 					reader.write("\r\n");
-					reader.write("N;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:" + Vcf.qpEncodeing(bean.getTrueName()) + ";");
+					reader.write("N;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:" + Vcf.qpEncodeing(bean.getName()) + ";");
 					reader.write("\r\n");
-					if ("" != bean.getMobile() && bean.getMobile() != null) {
-						reader.write("TEL;CELL:" + bean.getMobile() + "");
+					if ("" != bean.getTel() && bean.getTel() != null) {
+						reader.write("TEL;CELL:" + bean.getTel() + "");
 						reader.write("\r\n");
 					}
 					

@@ -8,10 +8,10 @@ public class Information {
 		this.name=name;
 		this.name=tel;
 	}
-	public String getTrueName() {
+	public String getName() {
 		return this.name;
 	}
-	public String getMobile() {
+	public String getTel() {
 		return this.tel;
 	}
 	
